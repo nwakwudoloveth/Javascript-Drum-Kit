@@ -59,9 +59,6 @@
 
 <script>
 
-
-  
-
 const playSound = (e) =>{
   let code;
   if(event.keyCode){
@@ -74,22 +71,32 @@ code = dataset.key
  const keyDown = document.querySelector(`.key[data-key="${code}"]`)
  const sound = document.querySelector(`audio[data-key="${code}"]`)
  
-  
+ addTranstion()
  console.log
  sound.play()
 
 }
 
- document.addEventListener("keydown", playSound )
+ document.addEventListener("keydown", playSound, )
 
  const keyBoards = Array.from(document.querySelectorAll(".key"))
 
- keyBoards.forEach(keyBoard =>{
+  keyBoards.forEach(keyBoard =>{
   keyBoard.addEventListener("click", () => {
+   
   const onClick = document.querySelector(`audio[data-key="${keyBoard.dataset.key}"]`)
   onClick.play()
 })})
 
+
+ const addTranstion = () => {
+ const keypress = document.querySelector(`.key[data-key="${code}"]`)
+ keypress.classList.add("transform")
+ setTimeout(()=> {
+  keypress.classList.remove("transform")}, 100)
+  }
+
+  
 
 
 </script>
@@ -97,3 +104,10 @@ code = dataset.key
 
 </body>
 </html>
+//Add transition
+
+// <!-- var  activeButton = document.querySelector("." + currentKey)
+// activeButton.classList.add("pressed")
+// setTimeout(function(){
+//   activeButton.classList.remove("pressed")
+// }, 100) -->

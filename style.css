@@ -61,6 +61,11 @@ kbd {
  width: 100px;
 }  
   
+.transform {
+  box-shadow: 0 3px 4px 0 #DBEDF3;
+  opacity: 0.5;
+  border-color: rgb(246, 255, 0);
+}
   
  
 
