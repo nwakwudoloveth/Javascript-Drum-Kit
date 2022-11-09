@@ -67,7 +67,15 @@ kbd {
   border-color: rgb(246, 255, 0);
 }
   
- 
+@media (min-width: 10px) {
+  .container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }}
+@media (min-width: 560px) {
+ .container{flex-wrap:unset}}
+
 
   
   
