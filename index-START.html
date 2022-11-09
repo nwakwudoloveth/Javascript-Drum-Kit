@@ -74,7 +74,9 @@ code = dataset.key
 
  const sound = document.querySelector(`audio[data-key="${code}"]`)
  
- 
+ keyDown.classList.add("transform")
+  setTimeout(()=> {
+keyDown.classList.remove("transform")}, 500)
   
  console.log
  sound.play()
@@ -88,7 +90,11 @@ code = dataset.key
   keyBoards.forEach(keyBoard =>{
   keyBoard.addEventListener("click", () => {
   const onClick = document.querySelector(`audio[data-key="${keyBoard.dataset.key}"]`)
- 
+  keyBoard.classList.add("transform")
+  setTimeout(()=> {
+  keyBoard.classList.remove("transform")}, 500)
+
+
   onClick.play()
 })})
 
